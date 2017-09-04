@@ -1,10 +1,13 @@
-import React from "react";
+import React from 'react';
 import { View } from "react-native";
 import { Card, Button, FormLabel, FormInput } from "react-native-elements";
 import { onSignIn } from "../views/auth";
 
+const applicationLogo = require('../images/org/madiba-logo.png');
+
 export default ({ navigation }) => (
   <View style={{ paddingVertical: 20 }}>
+
     <Card>
       <FormLabel>Email</FormLabel>
       <FormInput placeholder="Email address..." />

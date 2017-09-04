@@ -1,12 +1,12 @@
 
 import App from "./router";
 // export default App;
-
-import React from "react";
+import React from 'react';
+import { Component } from 'react';
 import { createRootNavigator } from "./router";
 import { isSignedIn } from "./views/auth";
 
-export default class App2 extends React.Component {
+export default class App2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ export default class App2 extends React.Component {
   componentWillMount() {
     isSignedIn()
       .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
-      .catch(err => alert("An error occurred"));
+      .catch(err => alert("An error occurred "+err));
   }
 
   render() {

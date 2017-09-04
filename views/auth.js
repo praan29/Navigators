@@ -16,7 +16,11 @@ export const isSignedIn = () => {
           resolve(false);
         }
       })
-      .catch(err => reject(err));
+      
+      .catch(  err => {
+        console.log(err);
+         reject(err)
+      });
     // resolve(true);
   });
 };
